@@ -1,0 +1,11 @@
+set P := bands coils;
+
+param:     a     c     u  :=
+  bands   200   25   6000
+  coils   140   30   4000 ;
+
+param b := 40;
+
+# In AMPL, there is a specific syntax for data
+# tables, which is sufficiently regular and unambiguous 
+# to be translated by a computer.

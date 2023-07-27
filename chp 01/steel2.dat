@@ -1,0 +1,12 @@
+set PROD := bands coils plate;
+param:    rate  profit  market :=
+  bands    200    25     6000
+  coils    140    30     4000 
+  plate    160    29     3500 ;
+param avail := 40;
+
+# Profits have increased compared to the two-variable version.
+# On closer examination, this result is not so surprising. Plate yields a profit of $4640 per hour, which is less than for bands but more than for coils. Thus plate is
+# produced to absorb the capacity not taken by bands; coils 
+# would be produced only if both bands and plate reached their 
+# market limits before the available hours were exhausted.

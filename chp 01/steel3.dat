@@ -1,0 +1,14 @@
+# In reality, a whole product line cannot be shut down solely to 
+# increase weekly profits. The simplest way to reflect this in 
+# the model is to add lower bounds on the production amounts. 
+# We have declared a new collection of parameters named commit, 
+# to represent the lower bounds on production that are imposed by 
+# sales commitments, and we have changed >= 0 to >= commit[p] in the
+# declaration of the variables Make[p].
+
+set PROD := bands coils plate;
+param:    rate  profit  commit  market :=
+  bands    200    25     1000     6000
+  coils    140    30     500      4000 
+  plate    160    29     750      3500 ;
+param avail := 40;
